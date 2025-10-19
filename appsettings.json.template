@@ -1,0 +1,12 @@
+{
+  "database": {
+    "host": "",
+    "dbname": "",    
+    "user": "",
+    "password": ""
+  },
+  "app": {
+    "name": "Tracks API",
+    "debug": true
+  }
+}

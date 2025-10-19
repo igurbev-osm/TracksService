@@ -1,0 +1,15 @@
+<?php
+use Psr\Container\ContainerInterface;
+
+return function ($container) {    
+        
+    $container->set(PDO::class, function (ContainerInterface $c) {
+        $settings = $c->get('settings');
+        $db = $settings['database'];
+        
+        $dsn = "pgsql:host={$db['host']};dbname={$db['dbname']}";
+        $pdo = new PDO($dsn, $db['user'], $db['password']);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $pdo;
+    });
+};
