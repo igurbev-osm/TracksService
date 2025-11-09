@@ -35,4 +35,20 @@ class TrackRepository{
         $stmt->setFetchMode(PDO::FETCH_CLASS, Track::class);
         return $stmt->fetchAll();
     }
+
+    public function addTrack(Track $track): string {
+        $sql = "INSERT INTO track(title, gpx, userid, max_lng, min_lng, max_lat, min_lat) 
+        VALUES(:title, :gpx, :userid, :max_lng, :min_lng, :max_lat, :min_lat)";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            'title' => $track->title,
+            'gpx' => $track->gpx,
+            'userid' => $track->userid,
+            'max_lng' => $track->max_lng, 
+            'min_lng' => $track->min_lng, 
+            'max_lat' => $track->max_lat, 
+            'min_lat' => $track->min_lat, 
+        ]);
+        return $this->pdo->lastInsertId();    }
 }

@@ -13,4 +13,17 @@ namespace Org\Osmap\Db\Model;
         public $min_lng;
         public $is_active;
        
+        public function __construct($id,$title,$userid,$gpx,$max_lat,$max_lng,$min_lat,$min_lng,$is_active = true,$creation_date=null,$update_date=null){
+            $this->id = $id;
+            $this->title = $title;
+            $this->userid = $userid;
+            $this->gpx = $gpx;            
+            $this->max_lat = $max_lat;
+            $this->max_lng = $max_lng;
+            $this->min_lat = $min_lat;
+            $this->min_lng = $min_lng;
+            $this->is_active = $is_active;
+            $this->creation_date = $creation_date;
+            $this->update_date = $update_date;
+        }
     }
