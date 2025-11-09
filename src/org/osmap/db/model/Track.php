@@ -13,7 +13,7 @@ namespace Org\Osmap\Db\Model;
         public $min_lng;
         public $is_active;
        
-        public function __construct($id,$title,$userid,$gpx,$max_lat,$max_lng,$min_lat,$min_lng,$is_active = true,$creation_date=null,$update_date=null){
+        public function __construct($id = null,$title = null,$userid = null,$gpx = null,$max_lat = null,$max_lng = null,$min_lat = null,$min_lng = null,$is_active = true,$creation_date=null,$update_date=null){
             $this->id = $id;
             $this->title = $title;
             $this->userid = $userid;

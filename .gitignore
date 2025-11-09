@@ -1,2 +1,5 @@
 vendor
 appsettings.json
+appsettings.json.igurbevnet
+.gitignore
+appsettings.json.osmap
