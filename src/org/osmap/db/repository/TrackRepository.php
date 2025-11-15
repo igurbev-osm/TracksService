@@ -1,7 +1,7 @@
 <?php
-namespace Org\Osmap\Db\Repository;
-use Org\Osmap\Db\Model\Track;
-use Org\Osmap\Utils\Gpx\Bounds;
+namespace org\osmap\db\repository;
+use org\osmap\db\model\Track;
+use org\osmap\utils\gpx\Bounds;
 use PDO;
 
 class TrackRepository{

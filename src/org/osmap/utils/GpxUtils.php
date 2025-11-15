@@ -1,5 +1,5 @@
 <?php
-namespace Org\Osmap\Utils;
+namespace org\osmap\utils;
 class GpxUtils{
     public static function getBoundsCorners($minLat, $minLng, $maxLat, $maxLng) {
     return [

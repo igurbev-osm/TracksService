@@ -1,9 +1,9 @@
 <?php
-namespace Org\Osmap\Controller;
+namespace org\osmap\controller;
 
-use Org\Osmap\Db\Model\Track;
-use Org\Osmap\Db\Repository\TrackRepository;
-use Org\Osmap\Utils\Gpx\Bounds;
+use org\osmap\db\model\Track;
+use org\osmap\db\repository\TrackRepository;
+use org\osmap\utils\gpx\Bounds;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

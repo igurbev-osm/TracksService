@@ -1,5 +1,5 @@
 <?php
-use Org\Osmap\Db\Repository\TrackRepository;
+use org\osmap\db\repository\TrackRepository;
 use Psr\Container\ContainerInterface;
 
 return function ($container) {    

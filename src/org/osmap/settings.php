@@ -1,5 +1,5 @@
 <?php
-namespace Org\Osmap;
+namespace org\osmap;
 
 class Settings {
     public static function load(string $path): array {

@@ -1,7 +1,7 @@
 <?php
-namespace Org\Osmap\Utils\Gpx;
+namespace org\osmap\utils\gpx;
 use Psr\Http\Message\ServerRequestInterface;
-use Org\Osmap\Utils\Gpx\Point;
+use org\osmap\utils\gpx\Point;
 class Bounds{
     public $maxLat;
     public $maxLng;

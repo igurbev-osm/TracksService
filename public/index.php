@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 use Slim\Factory\AppFactory;
 use DI\Container;
-use Org\Osmap\Settings;
+use org\osmap\Settings;
 
 require __DIR__ . '/../vendor/autoload.php';
 

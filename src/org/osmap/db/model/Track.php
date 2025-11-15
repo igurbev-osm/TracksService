@@ -1,5 +1,5 @@
 <?php
-namespace Org\Osmap\Db\Model;
+namespace org\osmap\db\model;
     class Track{
         public $id;
         public $title;

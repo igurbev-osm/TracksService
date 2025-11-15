@@ -1,5 +1,5 @@
 <?php
-namespace Org\Osmap\Utils\Gpx;
+namespace org\osmap\utils\gpx;
 class Point{
     public $lat;
     public $lng;

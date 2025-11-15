@@ -1,7 +1,7 @@
 <?php
 
 use Slim\App;
-use Org\Osmap\Controller\TrackController;
+use org\osmap\controller\TrackController;
 
 return function($app) {
     $app->get("/api/tracks", [TrackController::class,  "getTracks"]);
