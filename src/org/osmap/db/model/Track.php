@@ -16,4 +16,15 @@ use PhpParser\Node\Expr\Cast\Double;
         public ?float $min_lng;
         public ?bool $is_active;
        
+        public static function Create($title, $userid, $gpx, $max_lat,$max_lng,$min_lat,$min_lng):Track{
+            $track = new Track();
+            $track->title = $title;
+            $track->userid = $userid;
+            $track->gpx = $gpx;
+            $track->max_lat = $max_lat;
+            $track->max_lng = $max_lng;
+            $track->min_lat = $min_lat;
+            $track->min_lng = $min_lng;
+            return $track;
+        }
     }

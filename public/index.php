@@ -21,4 +21,15 @@ AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 (require __DIR__ . '/../src/org/osmap/routes.php')($app);
+$app->add(function ($request, $handler) {
+    $response = $handler->handle($request);
+
+    return $response
+        ->withHeader('Access-Control-Allow-Origin', '*')
+        ->withHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With')
+        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
+});
+$app->options('/{routes:.+}', function ($request, $response) {
+    return $response;
+});
 $app->run();

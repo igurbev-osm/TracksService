@@ -44,9 +44,10 @@ class TrackController{
         $gpx = $data['pgx'] ?? null;
         $bounds = $data['bounds'] ?? null;
         $title = $data["title"] ?? null;
+        $userid = $data["userid"] ?? null;
         $boundsArr = explode(";", $bounds);
 
-        $track = new Track(null, $title, 1, $gpx, $boundsArr[0],$boundsArr[1],$boundsArr[2],$boundsArr[3]);
+        $track = Track::Create($title, $userid, $gpx, $boundsArr[0],$boundsArr[1],$boundsArr[2],$boundsArr[3]);
         $newId = $this->trackRepository->addTrack($track);
         $json = '{"id": "' + $newId + '"}';
         $response->getBody()->write(json_encode($json));
