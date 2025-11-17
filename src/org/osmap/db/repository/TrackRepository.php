@@ -36,6 +36,17 @@ class TrackRepository{
         return $stmt->fetchAll();
     }
 
+    public function getByUserid($userid): array {
+        $sql = "SELECT * FROM track WHERE userid = :userid";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            'userid' => $userid,           
+        ]);
+
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Track::class);
+        return $stmt->fetchAll();
+    }
+
     public function addTrack(Track $track): string {
         $sql = "INSERT INTO track(title, gpx, userid, max_lng, min_lng, max_lat, min_lat) 
         VALUES(:title, :gpx, :userid, :max_lng, :min_lng, :max_lat, :min_lat)";

@@ -32,6 +32,13 @@ class TrackController{
         return $response->withHeader('Content-Type', 'application/json');
     }
 
+    public function getTracksByUserid(ServerRequestInterface $request, ResponseInterface $response, $args){
+        $userid = $args['userid'];
+        $tracks = $this->trackRepository->getByUserid($userid);
+        $response->getBody()->write(json_encode($tracks));
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
     public function addTrack(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface{
         $data = $request->getParsedBody();
         $gpx = $data['pgx'] ?? null;
