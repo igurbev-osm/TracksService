@@ -32,4 +32,5 @@ $app->add(function ($request, $handler) {
 $app->options('/{routes:.+}', function ($request, $response) {
     return $response;
 });
+$app->addBodyParsingMiddleware();
 $app->run();
